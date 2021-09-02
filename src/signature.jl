@@ -93,7 +93,7 @@ julia> contentsize("foo")
 "3"
 ```
 """
-contentsize(obj::String) = length(obj) |> string
+contentsize(obj::Union{String, Vector{UInt8}}) = length(obj) |> string
 
 
 # ------------------------------------------------------------------------------
